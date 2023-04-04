@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "client"
+version = "0.1.0"
+description = ""
+authors = ["Levkov Gleb <Glebchanskiy@yandex.by>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^1.10.7"
+requests = "^2.28.2"
+
+[tool.poetry.scripts]
+client = "src.client:start"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
