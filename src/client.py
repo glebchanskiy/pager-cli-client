@@ -4,7 +4,7 @@ from src.config import API_URL
 
 from src.http_requests import get_all
 from src.http_requests import send
-from src.http_requests import connect
+from src.http_requests import login
 
 
 def main():
@@ -29,11 +29,12 @@ def main():
 
 def start() -> None:
     print(f"Hi, {USERNAME}")
-    if connect(f"http://{API_URL}/shared"):
+    password = int(input("[pass]: "))
+    if login(USERNAME, password):
         try:
             main()
         except KeyboardInterrupt:
-            print("\nПоки 😘")
+            print("\nПоки")
         except Exception as err:
             print("Прозошли какие-то казусы...\n" + err)
     else:
