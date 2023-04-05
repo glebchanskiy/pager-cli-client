@@ -11,3 +11,11 @@ poetry install
 # 1111
 poetry run client {name}
 ```
+
+## Usage
+```sh
+@show - показать последние 10 сообщений
+@show 50 - показать последние 50 сообщений
+@help - usage
+# to send a message, simply enter the text
+```
